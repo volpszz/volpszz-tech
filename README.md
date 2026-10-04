@@ -9,6 +9,8 @@ Personal portfolio for [volpsz (@volpszz)](https://github.com/volpszz), focused 
 - Dark-purple visual identity and responsive layout.
 - Hardware Monitor, CyberShield and TCP Port Scanner project cards with category filters.
 - About, stack, mobile navigation and LinkedIn contact.
+- Current goals: CompTIA Security+, cyber labs/CTFs and security-focused projects.
+- Shared purple theme tokens cover illustrations, secondary text and interaction states.
 - Keyboard focus, skip link and reduced-motion support.
 - Static export deployed automatically with GitHub Actions.
 
@@ -41,3 +43,7 @@ GitHub Pages uses **GitHub Actions** as its publishing source. Every push to `ma
 The workflow sets `GITHUB_PAGES=true` to build assets under `/volpszz-tech`. If the repository is renamed, update the base path in `next.config.ts` and the website links.
 
 Featured projects are curated static content; they do not automatically synchronize with GitHub.
+
+## Visual QA
+
+See `docs/qa/theme-review.md` for the theme/content review and desktop/mobile screenshots. Certification and lab goals are presented as future objectives, not completed achievements.
