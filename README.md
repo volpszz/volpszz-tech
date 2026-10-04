@@ -1,6 +1,6 @@
 # Arthur Volpato — Portfolio
 
-Personal portfolio for [volpsz (@volpszz)](https://github.com/volpszz), focused on software engineering, systems, networking and application security.
+Personal portfolio for [volpsz (@volpszz)](https://github.com/volpszz), focused on software engineering, systems and cybersecurity, with career interests in Blue Team, Red Team, Purple Team and Security Engineering.
 
 **Website:** https://volpszz.github.io/volpszz-tech/
 
@@ -9,7 +9,8 @@ Personal portfolio for [volpsz (@volpszz)](https://github.com/volpszz), focused 
 - Dark-purple visual identity and responsive layout.
 - Hardware Monitor, CyberShield and TCP Port Scanner project cards with category filters.
 - About, stack, mobile navigation and LinkedIn contact.
-- Current goals: CompTIA Security+, cyber labs/CTFs and security-focused projects.
+- Current goals: continuous learning and active pursuit of industry certifications (such as CompTIA Network+ and Security+), cyber labs/CTFs and security-focused projects.
+- Explicit career objectives in Information Security, spanning cyber defense, authorized offensive security and Security Engineering.
 - Shared purple theme tokens cover illustrations, secondary text and interaction states.
 - Keyboard focus, skip link and reduced-motion support.
 - Static export deployed automatically with GitHub Actions.
@@ -46,4 +47,4 @@ Featured projects are curated static content; they do not automatically synchron
 
 ## Visual QA
 
-See `docs/qa/theme-review.md` for the theme/content review and desktop/mobile screenshots. Certification and lab goals are presented as future objectives, not completed achievements.
+See `docs/qa/career-review.md` for the latest career/certification content checks and screenshots. `docs/qa/theme-review.md` records the earlier purple-theme review. Certification and lab goals are presented as objectives, not completed achievements.

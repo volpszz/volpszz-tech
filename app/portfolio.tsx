@@ -240,7 +240,7 @@ export default function Portfolio() {
             <span className="accent">✳</span>
             <span>Systems & networking</span>
             <span className="accent">✳</span>
-            <span>Application security</span>
+            <span>Security engineering</span>
           </div>
         </div>
         <section id="work" className="container section">
@@ -349,10 +349,24 @@ export default function Portfolio() {
               </p>
               <p>
                 I’m building with Rust, Python and C while learning JavaScript,
-                React and Next.js. My direction is cybersecurity, DevSecOps and
-                application security — connecting software fundamentals with
-                hands-on security practice.
+                React and Next.js. I’m pursuing a career in Information Security,
+                with interests in Blue Team, Red Team, Purple Team and Security
+                Engineering — developing skills across cyber defense, authorized
+                offensive security and collaboration between both.
               </p>
+              <div
+                className="stack-items"
+                aria-label="Cybersecurity career interests"
+              >
+                {[
+                  "Blue Team",
+                  "Red Team",
+                  "Purple Team",
+                  "Security Engineering",
+                ].map((area) => (
+                  <span key={area}>{area}</span>
+                ))}
+              </div>
               <div className="about-facts">
                 <div>
                   <span className="eyebrow">CURRENTLY</span>
@@ -360,7 +374,7 @@ export default function Portfolio() {
                 </div>
                 <div>
                   <span className="eyebrow">NEXT CHAPTER</span>
-                  <strong>DevSecOps & Application Security</strong>
+                  <strong>A career in Information Security</strong>
                 </div>
               </div>
             </div>
@@ -430,7 +444,7 @@ export default function Portfolio() {
                 </h2>
               </div>
               <p className="section-description">
-                My current goals in cybersecurity.
+                Continuous learning. A career in cybersecurity.
                 <br />
                 Foundations, practice and evidence.
               </p>
@@ -439,13 +453,13 @@ export default function Portfolio() {
               {[
                 {
                   number: "01",
-                  label: "CERTIFICATION GOAL",
-                  title: "CompTIA Security+",
+                  label: "CONTINUOUS LEARNING",
+                  title: "Industry certifications",
                   description:
-                    "Work toward the CompTIA Security+ certification and strengthen my information security foundations.",
+                    "I’m continuously learning and actively pursuing industry certifications to strengthen my cybersecurity foundations. CompTIA Network+ and Security+ are examples of certifications I’m working toward.",
                   steps: [
-                    "Build a structured study routine",
-                    "Connect theory with practical exercises",
+                    "Connect structured study with hands-on practice",
+                    "Explore new certifications as my career develops",
                   ],
                 },
                 {
@@ -485,8 +499,9 @@ export default function Portfolio() {
               ))}
             </div>
             <p className="goals-note">
-              These are goals I’m working toward, not completed certifications
-              or claimed achievements.
+              Certification names are examples of my current learning goals,
+              not credentials I already hold. Labs and projects support that
+              journey.
             </p>
           </div>
         </section>

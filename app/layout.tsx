@@ -13,11 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Arthur Volpato | Software & Security",
-  description: "Arthur Volpato’s portfolio. Software engineering, systems and security projects built with Rust, Python and JavaScript.",
+  title: "Arthur Volpato | Software & Cybersecurity",
+  description:
+    "Arthur Volpato’s portfolio: software, systems and cybersecurity. Career interests in Blue Team, Red Team, Purple Team and Security Engineering.",
   openGraph: {
-    title: "Arthur Volpato | Software & Security",
-    description: "Curious by nature. Builder by choice. Explore my software, systems and security projects.",
+    title: "Arthur Volpato | Software & Cybersecurity",
+    description:
+      "Software, systems and cybersecurity projects. Continuous learning and a career path across cyber defense, authorized offensive security and Security Engineering.",
     type: "website",
   },
   twitter: { card: "summary_large_image" },
