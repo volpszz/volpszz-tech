@@ -10,7 +10,6 @@ const projects = [
     slug: "hardware-monitor",
     category: "Systems",
     language: "Rust",
-    number: "01",
     description:
       "A Windows terminal monitor for CPU, RAM and GPU. Built around real sensor readings, native APIs and a persistent PowerShell bridge.",
     tags: ["Rust", "Windows APIs", "PowerShell"],
@@ -21,7 +20,6 @@ const projects = [
     slug: "cybershield-website",
     category: "Web",
     language: "JavaScript",
-    number: "02",
     description:
       "A full-stack learning application with authentication, protected sessions and SQLite persistence. Security concepts put into practice — not a live security service.",
     tags: ["JavaScript", "Express", "SQLite"],
@@ -32,7 +30,6 @@ const projects = [
     slug: "simple-port-scanner",
     category: "Security",
     language: "Python",
-    number: "03",
     description:
       "An educational TCP scanner exploring sockets, hostname resolution and network reconnaissance. For owned systems or explicitly authorized testing only.",
     tags: ["Python", "Sockets", "TCP/IP"],
@@ -143,10 +140,7 @@ export default function Portfolio() {
       <header className="site-header">
         <div className="container header-inner">
           <a className="wordmark" href="#home" aria-label="volpsz home">
-            v<span>.</span>
-            <span className="wordmark-name">
-              volpsz<span className="accent">/</span>
-            </span>
+            volpsz<span className="accent">/</span>
           </a>
           <nav
             className={menuOpen ? "navigation open" : "navigation"}
@@ -185,7 +179,7 @@ export default function Portfolio() {
         <section id="home" className="hero container">
           <div className="hero-copy">
             <p className="eyebrow">
-              <span className="status-dot" /> SOFTWARE & SECURITY · @VOLPSZZ
+              ARTHUR VOLPATO · SOFTWARE & CYBERSECURITY
             </p>
             <h1>
               Curious by nature.
@@ -209,54 +203,17 @@ export default function Portfolio() {
                 GitHub <Arrow diagonal />
               </a>
             </div>
-            <div className="hero-caption">
-              <span>ENGINEERING STUDENT</span>
-              <span className="caption-line" />
-              <span>ALWAYS BUILDING</span>
-            </div>
-          </div>
-          <div className="hero-art">
-            <div className="art-grid" />
-            <span className="art-coordinate top">
-              FIG. 001 — THE BUILDER’S MINDSET
-            </span>
-            <div className="orbital orbital-one" />
-            <div className="orbital orbital-two" />
-            <div className="monogram">
-              av<span>.</span>
-            </div>
-            <span className="floating-tag tag-one">&lt; build /&gt;</span>
-            <span className="floating-tag tag-two">secure by curiosity</span>
-            <div className="art-bottom">
-              <span>RUST · PYTHON · C</span>
-              <span>↗</span>
-            </div>
           </div>
         </section>
-        <div className="focus-strip">
-          <div className="container strip-inner">
-            <span className="eyebrow">MY EXPLORATION SPACE</span>
-            <span>Software engineering</span>
-            <span className="accent">✳</span>
-            <span>Systems & networking</span>
-            <span className="accent">✳</span>
-            <span>Security engineering</span>
-          </div>
-        </div>
+
         <section id="work" className="container section">
           <div className="section-heading">
             <div>
-              <p className="eyebrow accent">01 / SELECTED WORK</p>
-              <h2>
-                Less talk.
-                <br />
-                More <span className="serif">building.</span>
-              </h2>
+              <p className="eyebrow accent">WORK</p>
+              <h2>Selected projects.</h2>
             </div>
             <p className="section-description">
-              Experiments turned into working projects.
-              <br />
-              Open source, hands-on, always evolving.
+              Open-source projects in software, systems and security.
             </p>
           </div>
           <div className="work-toolbar">
@@ -269,7 +226,6 @@ export default function Portfolio() {
                   onClick={() => setFilter(category)}
                 >
                   {category}
-                  {category === "All" && <span>03</span>}
                 </button>
               ))}
             </div>
@@ -299,9 +255,7 @@ export default function Portfolio() {
                 </a>
                 <div className="project-info">
                   <div className="project-meta">
-                    <span>
-                      {project.number} / {project.category}
-                    </span>
+                    <span>{project.category}</span>
                     <span>
                       <i
                         className={`language-dot ${project.language.toLowerCase()}`}
@@ -332,15 +286,12 @@ export default function Portfolio() {
         <section id="about" className="about-section">
           <div className="container about-grid">
             <div>
-              <p className="eyebrow accent">02 / THE PERSON BEHIND THE CODE</p>
+              <p className="eyebrow accent">ABOUT</p>
               <h2>
-                Understanding
+                Software foundations.
                 <br />
-                how things <span className="serif">work.</span>
+                Security mindset.
               </h2>
-              <div className="about-signature">
-                Arthur Volpato <span>/ volpsz</span>
-              </div>
             </div>
             <div className="about-copy">
               <p>
@@ -355,7 +306,8 @@ export default function Portfolio() {
                 offensive security and collaboration between both.
               </p>
               <div
-                className="stack-items"
+                className="career-interests"
+                role="group"
                 aria-label="Cybersecurity career interests"
               >
                 {[
@@ -367,62 +319,43 @@ export default function Portfolio() {
                   <span key={area}>{area}</span>
                 ))}
               </div>
-              <div className="about-facts">
-                <div>
-                  <span className="eyebrow">CURRENTLY</span>
-                  <strong>Systems & security in practice</strong>
-                </div>
-                <div>
-                  <span className="eyebrow">NEXT CHAPTER</span>
-                  <strong>A career in Information Security</strong>
-                </div>
-              </div>
             </div>
           </div>
         </section>
         <section id="stack" className="container section stack-section">
           <div className="section-heading">
             <div>
-              <p className="eyebrow accent">03 / TOOLKIT</p>
-              <h2>
-                The tools behind
-                <br />
-                the <span className="serif">ideas.</span>
-              </h2>
+              <p className="eyebrow accent">STACK</p>
+              <h2>My toolkit.</h2>
             </div>
             <p className="section-description">
-              A growing toolkit.
-              <br />
-              Fundamentals first, frameworks second.
+              Building with Rust, Python and C. Expanding into the web.
             </p>
           </div>
           <div className="stack-grid">
             {[
               {
-                number: "01",
                 title: "Languages",
-                detail: "The building blocks",
                 items: ["Rust", "Python", "C", "JavaScript"],
               },
               {
-                number: "02",
                 title: "Web",
-                detail: "Learning & building",
                 items: ["HTML", "CSS", "React", "Next.js"],
               },
               {
-                number: "03",
                 title: "Systems, networking & tools",
-                detail: "Under the hood",
                 items: [
-                  "Linux", "Bash", "PowerShell", "Git", "GitHub", "Windows",
+                  "Linux",
+                  "Bash",
+                  "PowerShell",
+                  "Git",
+                  "GitHub",
+                  "Windows",
                 ],
               },
             ].map((group) => (
               <div className="stack-card" key={group.title}>
-                <span className="stack-number">{group.number} ↗</span>
                 <h3>{group.title}</h3>
-                <p>{group.detail}</p>
                 <div className="stack-items">
                   {group.items.map((item) => (
                     <span key={item}>{item}</span>
@@ -436,65 +369,34 @@ export default function Portfolio() {
           <div className="container section">
             <div className="section-heading">
               <div>
-                <p className="eyebrow accent">04 / WHAT’S NEXT</p>
-                <h2>
-                  A clear direction.
-                  <br />
-                  Practical <span className="serif">next steps.</span>
-                </h2>
+                <p className="eyebrow accent">GOALS</p>
+                <h2>What’s next.</h2>
               </div>
               <p className="section-description">
-                Continuous learning. A career in cybersecurity.
-                <br />
-                Foundations, practice and evidence.
+                Continuous learning toward a career in Information Security.
               </p>
             </div>
             <div className="goals-grid">
               {[
                 {
-                  number: "01",
-                  label: "CONTINUOUS LEARNING",
                   title: "Industry certifications",
                   description:
                     "I’m continuously learning and actively pursuing industry certifications to strengthen my cybersecurity foundations. CompTIA Network+ and Security+ are examples of certifications I’m working toward.",
-                  steps: [
-                    "Connect structured study with hands-on practice",
-                    "Explore new certifications as my career develops",
-                  ],
                 },
                 {
-                  number: "02",
-                  label: "HANDS-ON PRACTICE",
                   title: "Cyber labs & CTFs",
                   description:
-                    "Practice in authorized labs and capture-the-flag challenges to develop my security reasoning and problem-solving skills.",
-                  steps: [
-                    "Explore tools in controlled environments",
-                    "Document approaches and lessons learned",
-                  ],
+                    "Practice in authorized labs and CTFs, explore security tools and document the approaches and lessons learned.",
                 },
                 {
-                  number: "03",
-                  label: "PORTFOLIO GOAL",
                   title: "Knowledge into projects",
                   description:
-                    "Build security-focused projects that show how I use tools, investigate problems and turn technical knowledge into working solutions.",
-                  steps: [
-                    "Publish code with reproducible instructions",
-                    "Explain decisions, results and limitations",
-                  ],
+                    "Build security-focused projects that demonstrate my knowledge of tools, with reproducible instructions and clear results and limitations.",
                 },
               ].map((goal) => (
-                <article className="goal-card" key={goal.number}>
-                  <div className="goal-topline">
-                    <span className="goal-number">{goal.number}</span>
-                    <span className="goal-label">{goal.label}</span>
-                  </div>
+                <article className="goal-card" key={goal.title}>
                   <h3>{goal.title}</h3>
                   <p>{goal.description}</p>
-                  <ul>
-                    {goal.steps.map((step) => <li key={step}>{step}</li>)}
-                  </ul>
                 </article>
               ))}
             </div>
@@ -507,19 +409,12 @@ export default function Portfolio() {
         </section>
         <section id="contact" className="container contact-section">
           <div className="contact-top">
-            <p className="eyebrow">05 / START A CONVERSATION</p>
-            <span className="accent">✳</span>
+            <p className="eyebrow accent">CONTACT</p>
           </div>
-          <h2>
-            Good things start
-            <br />
-            with a <span className="serif">hello.</span>
-          </h2>
+          <h2>Let’s connect.</h2>
           <div className="contact-bottom">
             <p>
-              Have a project, an opportunity or an idea?
-              <br />
-              Let’s connect and see where it goes.
+              Have a project, an opportunity or an idea? Let’s talk.
             </p>
             <a
               href={linkedin}
