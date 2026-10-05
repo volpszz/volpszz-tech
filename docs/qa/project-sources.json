@@ -1,0 +1,25 @@
+[
+  {
+    "repository": "volpszz/hardware-monitor",
+    "commit": "50dbb229e6ed41f80558b613d83ba343eede88b9",
+    "readme_sha": "802af1c3b0abe029bcbfafba3ceeba3964bac897",
+    "readme_url": "https://github.com/volpszz/hardware-monitor#readme"
+  },
+  {
+    "repository": "volpszz/cybershield-website",
+    "commit": "deb4036613cbfb63e75410813053d6dccb1c3dd8",
+    "readme_sha": "ac92b85b9be3fb11854fb05cdfcd459700aef6af",
+    "readme_url": "https://github.com/volpszz/cybershield-website#readme"
+  },
+  {
+    "repository": "volpszz/simple-port-scanner",
+    "commit": "1c7e048480365fda56a471e12f884811c8dc66ae",
+    "readme_sha": "323df65b7caefbb5cfa187f46ca67e577d13d53f",
+    "readme_url": "https://github.com/volpszz/simple-port-scanner#readme",
+    "implementation": {
+      "path": "simplePort_scanner.py",
+      "sha": "d87460afb66116650320f7f288fd549ccd7650db",
+      "url": "https://github.com/volpszz/simple-port-scanner/blob/main/simplePort_scanner.py"
+    }
+  }
+]

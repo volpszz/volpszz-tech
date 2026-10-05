@@ -1,0 +1,780 @@
+{
+  "total": 72,
+  "passed": 72,
+  "groups": {
+    "home": 2,
+    "filter": 8,
+    "navigation": 5,
+    "case": 6,
+    "direct": 3,
+    "back": 3,
+    "responsive": 40,
+    "mobile": 4,
+    "locale": 1
+  },
+  "checks": [
+    {
+      "check": "home-language-pt",
+      "passed": true,
+      "details": {
+        "lang": "pt-BR",
+        "headline": "Software, sistemas\ne cibersegurança.",
+        "stored": "pt",
+        "labels": [
+          "Projetos",
+          "Sobre",
+          "Tecnologias",
+          "Objetivos",
+          "Contato"
+        ]
+      }
+    },
+    {
+      "check": "filter-pt-all",
+      "passed": true,
+      "details": [
+        "Hardware Monitor",
+        "CyberShield",
+        "TCP Port Scanner"
+      ]
+    },
+    {
+      "check": "filter-pt-systems",
+      "passed": true,
+      "details": [
+        "Hardware Monitor"
+      ]
+    },
+    {
+      "check": "filter-pt-web",
+      "passed": true,
+      "details": [
+        "CyberShield"
+      ]
+    },
+    {
+      "check": "filter-pt-security",
+      "passed": true,
+      "details": [
+        "TCP Port Scanner"
+      ]
+    },
+    {
+      "check": "home-language-en",
+      "passed": true,
+      "details": {
+        "lang": "en",
+        "headline": "Software, systems\nand cybersecurity.",
+        "stored": "en",
+        "labels": [
+          "Projects",
+          "About",
+          "Toolkit",
+          "Goals",
+          "Contact"
+        ]
+      }
+    },
+    {
+      "check": "filter-en-all",
+      "passed": true,
+      "details": [
+        "Hardware Monitor",
+        "CyberShield",
+        "TCP Port Scanner"
+      ]
+    },
+    {
+      "check": "filter-en-systems",
+      "passed": true,
+      "details": [
+        "Hardware Monitor"
+      ]
+    },
+    {
+      "check": "filter-en-web",
+      "passed": true,
+      "details": [
+        "CyberShield"
+      ]
+    },
+    {
+      "check": "filter-en-security",
+      "passed": true,
+      "details": [
+        "TCP Port Scanner"
+      ]
+    },
+    {
+      "check": "navigation-work",
+      "passed": true,
+      "details": {
+        "hash": "#work",
+        "active": "#work"
+      }
+    },
+    {
+      "check": "navigation-about",
+      "passed": true,
+      "details": {
+        "hash": "#about",
+        "active": "#about"
+      }
+    },
+    {
+      "check": "navigation-stack",
+      "passed": true,
+      "details": {
+        "hash": "#stack",
+        "active": "#stack"
+      }
+    },
+    {
+      "check": "navigation-goals",
+      "passed": true,
+      "details": {
+        "hash": "#goals",
+        "active": "#goals"
+      }
+    },
+    {
+      "check": "navigation-contact",
+      "passed": true,
+      "details": {
+        "hash": "#contact",
+        "active": "#contact"
+      }
+    },
+    {
+      "check": "case-en-hardware-monitor",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:3102/volpszz-tech/projects/hardware-monitor/",
+        "lang": "en",
+        "title": "Hardware Monitor",
+        "headings": [
+          "Context & objective",
+          "What it does",
+          "How it works",
+          "Technical decisions",
+          "What this project practices",
+          "Limitations & scope"
+        ],
+        "features": 5,
+        "limitations": 3,
+        "activeMenu": "Projects"
+      }
+    },
+    {
+      "check": "direct-reload-hardware-monitor",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:3102/volpszz-tech/projects/hardware-monitor/",
+        "lang": "en",
+        "ready": true,
+        "stored": "en"
+      }
+    },
+    {
+      "check": "case-pt-hardware-monitor",
+      "passed": true,
+      "details": {
+        "lang": "pt-BR",
+        "headings": [
+          "Contexto e objetivo",
+          "O que o projeto faz",
+          "Como funciona",
+          "Decisões técnicas",
+          "O que este projeto exercita",
+          "Limitações e escopo"
+        ],
+        "summary": "Um monitor de CPU, RAM e GPU para Windows, construído em Rust com integração a sensores e APIs nativas.",
+        "anchors": true
+      }
+    },
+    {
+      "check": "back-home-hardware-monitor",
+      "passed": true,
+      "details": {
+        "lang": "pt-BR",
+        "headline": "Software, sistemas\ne cibersegurança.",
+        "hash": "#work"
+      }
+    },
+    {
+      "check": "case-en-cybershield-website",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:3102/volpszz-tech/projects/cybershield-website/",
+        "lang": "en",
+        "title": "CyberShield",
+        "headings": [
+          "Context & objective",
+          "What it does",
+          "How it works",
+          "Technical decisions",
+          "What this project practices",
+          "Limitations & scope"
+        ],
+        "features": 5,
+        "limitations": 3,
+        "activeMenu": "Projects"
+      }
+    },
+    {
+      "check": "direct-reload-cybershield-website",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:3102/volpszz-tech/projects/cybershield-website/",
+        "lang": "en",
+        "ready": true,
+        "stored": "en"
+      }
+    },
+    {
+      "check": "case-pt-cybershield-website",
+      "passed": true,
+      "details": {
+        "lang": "pt-BR",
+        "headings": [
+          "Contexto e objetivo",
+          "O que o projeto faz",
+          "Como funciona",
+          "Decisões técnicas",
+          "O que este projeto exercita",
+          "Limitações e escopo"
+        ],
+        "summary": "Uma aplicação de aprendizado full-stack com autenticação, sessões protegidas e persistência em SQLite.",
+        "anchors": true
+      }
+    },
+    {
+      "check": "back-home-cybershield-website",
+      "passed": true,
+      "details": {
+        "lang": "pt-BR",
+        "headline": "Software, sistemas\ne cibersegurança.",
+        "hash": "#work"
+      }
+    },
+    {
+      "check": "case-en-simple-port-scanner",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:3102/volpszz-tech/projects/simple-port-scanner/",
+        "lang": "en",
+        "title": "TCP Port Scanner",
+        "headings": [
+          "Context & objective",
+          "What it does",
+          "How it works",
+          "Technical decisions",
+          "What this project practices",
+          "Limitations & scope"
+        ],
+        "features": 4,
+        "limitations": 4,
+        "activeMenu": "Projects"
+      }
+    },
+    {
+      "check": "direct-reload-simple-port-scanner",
+      "passed": true,
+      "details": {
+        "url": "http://127.0.0.1:3102/volpszz-tech/projects/simple-port-scanner/",
+        "lang": "en",
+        "ready": true,
+        "stored": "en"
+      }
+    },
+    {
+      "check": "case-pt-simple-port-scanner",
+      "passed": true,
+      "details": {
+        "lang": "pt-BR",
+        "headings": [
+          "Contexto e objetivo",
+          "O que o projeto faz",
+          "Como funciona",
+          "Decisões técnicas",
+          "O que este projeto exercita",
+          "Limitações e escopo"
+        ],
+        "summary": "Um scanner TCP educacional para praticar sockets, resolução de nomes e fundamentos de redes.",
+        "anchors": true
+      }
+    },
+    {
+      "check": "back-home-simple-port-scanner",
+      "passed": true,
+      "details": {
+        "lang": "pt-BR",
+        "headline": "Software, sistemas\ne cibersegurança.",
+        "hash": "#work"
+      }
+    },
+    {
+      "check": "responsive-home-pt-320",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "documentWidth": 320,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-home-pt-390",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "documentWidth": 390,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-home-pt-768",
+      "passed": true,
+      "details": {
+        "width": 768,
+        "documentWidth": 753,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-home-pt-1024",
+      "passed": true,
+      "details": {
+        "width": 1024,
+        "documentWidth": 1009,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-home-pt-1440",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "documentWidth": 1425,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-home-en-320",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "documentWidth": 320,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-home-en-390",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "documentWidth": 390,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-home-en-768",
+      "passed": true,
+      "details": {
+        "width": 768,
+        "documentWidth": 753,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-home-en-1024",
+      "passed": true,
+      "details": {
+        "width": 1024,
+        "documentWidth": 1009,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-home-en-1440",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "documentWidth": 1425,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-hardware-monitor-pt-320",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "documentWidth": 320,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-hardware-monitor-pt-390",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "documentWidth": 390,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-hardware-monitor-pt-768",
+      "passed": true,
+      "details": {
+        "width": 768,
+        "documentWidth": 753,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-hardware-monitor-pt-1024",
+      "passed": true,
+      "details": {
+        "width": 1024,
+        "documentWidth": 1009,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-hardware-monitor-pt-1440",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "documentWidth": 1425,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-hardware-monitor-en-320",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "documentWidth": 320,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-hardware-monitor-en-390",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "documentWidth": 390,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-hardware-monitor-en-768",
+      "passed": true,
+      "details": {
+        "width": 768,
+        "documentWidth": 753,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-hardware-monitor-en-1024",
+      "passed": true,
+      "details": {
+        "width": 1024,
+        "documentWidth": 1009,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-hardware-monitor-en-1440",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "documentWidth": 1425,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-cybershield-website-pt-320",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "documentWidth": 320,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-cybershield-website-pt-390",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "documentWidth": 390,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-cybershield-website-pt-768",
+      "passed": true,
+      "details": {
+        "width": 768,
+        "documentWidth": 753,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-cybershield-website-pt-1024",
+      "passed": true,
+      "details": {
+        "width": 1024,
+        "documentWidth": 1009,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-cybershield-website-pt-1440",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "documentWidth": 1425,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-cybershield-website-en-320",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "documentWidth": 320,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-cybershield-website-en-390",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "documentWidth": 390,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-cybershield-website-en-768",
+      "passed": true,
+      "details": {
+        "width": 768,
+        "documentWidth": 753,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-cybershield-website-en-1024",
+      "passed": true,
+      "details": {
+        "width": 1024,
+        "documentWidth": 1009,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-cybershield-website-en-1440",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "documentWidth": 1425,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-simple-port-scanner-pt-320",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "documentWidth": 320,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-simple-port-scanner-pt-390",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "documentWidth": 390,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-simple-port-scanner-pt-768",
+      "passed": true,
+      "details": {
+        "width": 768,
+        "documentWidth": 753,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-simple-port-scanner-pt-1024",
+      "passed": true,
+      "details": {
+        "width": 1024,
+        "documentWidth": 1009,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-simple-port-scanner-pt-1440",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "documentWidth": 1425,
+        "overflow": false,
+        "lang": "pt-BR"
+      }
+    },
+    {
+      "check": "responsive-simple-port-scanner-en-320",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "documentWidth": 320,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-simple-port-scanner-en-390",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "documentWidth": 390,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-simple-port-scanner-en-768",
+      "passed": true,
+      "details": {
+        "width": 768,
+        "documentWidth": 753,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-simple-port-scanner-en-1024",
+      "passed": true,
+      "details": {
+        "width": 1024,
+        "documentWidth": 1009,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "responsive-simple-port-scanner-en-1440",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "documentWidth": 1425,
+        "overflow": false,
+        "lang": "en"
+      }
+    },
+    {
+      "check": "mobile-menu-open-pt",
+      "passed": true,
+      "details": {
+        "expanded": "true",
+        "overflow": false,
+        "label": "Fechar−",
+        "languageSizes": [
+          {
+            "w": 44,
+            "h": 44
+          },
+          {
+            "w": 44,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "check": "mobile-menu-escape-pt",
+      "passed": true,
+      "details": {
+        "closed": true,
+        "focusRestored": true
+      }
+    },
+    {
+      "check": "mobile-menu-open-en",
+      "passed": true,
+      "details": {
+        "expanded": "true",
+        "overflow": false,
+        "label": "Close−",
+        "languageSizes": [
+          {
+            "w": 44,
+            "h": 44
+          },
+          {
+            "w": 44,
+            "h": 44
+          }
+        ]
+      }
+    },
+    {
+      "check": "mobile-menu-escape-en",
+      "passed": true,
+      "details": {
+        "closed": true,
+        "focusRestored": true
+      }
+    },
+    {
+      "check": "locale-write-blocked-fallback",
+      "passed": true,
+      "details": {
+        "lang": "en",
+        "pressed": "true",
+        "stored": "pt"
+      }
+    }
+  ]
+}
