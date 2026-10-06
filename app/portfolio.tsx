@@ -58,10 +58,45 @@ export default function Portfolio() {
           </div>
         </section>
 
+        <section id="about" className="container section about-section">
+          <SectionHeading
+            number="01"
+            label={t.aboutLabel}
+            title={t.aboutTitle}
+          />
+          <div className="about-grid">
+            <div className="about-identity">
+              <span className="identity-monogram" aria-hidden="true">
+                AV
+              </span>
+              <div>
+                <strong>Arthur Volpato</strong>
+                <span>volpsz / @volpszz</span>
+              </div>
+            </div>
+            <div className="about-copy">
+              <p>{t.aboutFirst}</p>
+              <p>{t.aboutSecond}</p>
+              <div className="career-block">
+                <p className="eyebrow">{t.careerLabel}</p>
+                <div
+                  className="career-interests"
+                  role="group"
+                  aria-label={t.careerAria}
+                >
+                  {careerAreas.map((area) => (
+                    <span key={area}>{area}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section id="work" className="work-section section-band">
           <div className="container section">
             <SectionHeading
-              number="01"
+              number="02"
               label={t.workLabel}
               title={t.workTitle}
               description={t.workDescription}
@@ -128,41 +163,6 @@ export default function Portfolio() {
                   </div>
                 </article>
               ))}
-            </div>
-          </div>
-        </section>
-
-        <section id="about" className="container section about-section">
-          <SectionHeading
-            number="02"
-            label={t.aboutLabel}
-            title={t.aboutTitle}
-          />
-          <div className="about-grid">
-            <div className="about-identity">
-              <span className="identity-monogram" aria-hidden="true">
-                AV
-              </span>
-              <div>
-                <strong>Arthur Volpato</strong>
-                <span>volpsz / @volpszz</span>
-              </div>
-            </div>
-            <div className="about-copy">
-              <p>{t.aboutFirst}</p>
-              <p>{t.aboutSecond}</p>
-              <div className="career-block">
-                <p className="eyebrow">{t.careerLabel}</p>
-                <div
-                  className="career-interests"
-                  role="group"
-                  aria-label={t.careerAria}
-                >
-                  {careerAreas.map((area) => (
-                    <span key={area}>{area}</span>
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </section>

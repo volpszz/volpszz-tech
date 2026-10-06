@@ -23,8 +23,8 @@ export const copy = {
   pt: {
     pageTitle: "Arthur Volpato | Software e Cibersegurança",
     nav: [
-      ["Projetos", "work"],
       ["Sobre", "about"],
+      ["Projetos", "work"],
       ["Tecnologias", "stack"],
       ["Objetivos", "goals"],
       ["Contato", "contact"],
@@ -39,7 +39,7 @@ export const copy = {
     close: "Fechar",
     language: "Selecionar idioma",
     languageNames: { pt: "Português", en: "English" },
-    eyebrow: "ARTHUR VOLPATO · PORTFÓLIO",
+    eyebrow: "Arthur Volpato · Portfólio",
     heroLine: "Software, sistemas",
     heroAccent: "e cibersegurança.",
     heroDescription:
@@ -48,7 +48,7 @@ export const copy = {
     projectIndex: "EM DESTAQUE",
     indexDescription:
       "Código aberto. Contexto técnico. Aprendizado na prática.",
-    workLabel: "PROJETOS",
+    workLabel: "Projetos",
     workTitle: "Da ideia à implementação.",
     workDescription:
       "Uma seleção de projetos em sistemas, desenvolvimento e segurança — com os detalhes por trás do código.",
@@ -63,15 +63,15 @@ export const copy = {
     details: "Saiba mais",
     sourceCode: "Código no GitHub",
     allRepos: "Todos os repositórios",
-    aboutLabel: "SOBRE",
+    aboutLabel: "Sobre",
     aboutTitle: "Fundamentos de software. Direção em segurança.",
     aboutFirst:
       "Estudo Engenharia de Software na UniCesumar e trabalho como Help Desk N1 em uma empresa de ISP/IoT.",
     aboutSecond:
       "Construo com Rust, Python e C e estou aprendendo JavaScript, React e Next.js. Meu objetivo profissional é desenvolver carreira em Segurança da Informação, explorando defesa cibernética, segurança ofensiva autorizada e a colaboração entre essas frentes.",
-    careerLabel: "FRENTES DE INTERESSE",
+    careerLabel: "Frentes de interesse",
     careerAria: "Interesses de carreira em cibersegurança",
-    stackLabel: "TECNOLOGIAS",
+    stackLabel: "Tecnologias",
     stackTitle: "Ferramentas com propósito.",
     stackDescription:
       "Minha base de programação e as tecnologias que uso e continuo aprendendo.",
@@ -80,7 +80,7 @@ export const copy = {
       web: "Desenvolvimento web",
       systems: "Sistemas e ferramentas",
     },
-    goalsLabel: "OBJETIVOS",
+    goalsLabel: "Objetivos",
     goalsTitle: "O próximo passo é continuar aprendendo.",
     goalsDescription:
       "Formação, prática e projetos como parte da minha trajetória em cibersegurança.",
@@ -103,14 +103,14 @@ export const copy = {
     ],
     goalNote:
       "As certificações citadas são objetivos de aprendizado, não credenciais já conquistadas.",
-    contactLabel: "CONTATO",
+    contactLabel: "Contato",
     contactTitle: "Vamos conversar.",
     contactDescription:
       "Projetos, oportunidades e boas conversas sobre tecnologia e segurança. Você me encontra por aqui.",
     contactButton: "Conectar no LinkedIn",
     footer: "Software, sistemas e aprendizado contínuo.",
     top: "Voltar ao início",
-    caseLabel: "ESTUDO DE PROJETO",
+    caseLabel: "Estudo de projeto",
     back: "Voltar aos projetos",
     overview: "Contexto e objetivo",
     features: "O que o projeto faz",
@@ -136,8 +136,8 @@ export const copy = {
   en: {
     pageTitle: "Arthur Volpato | Software & Cybersecurity",
     nav: [
-      ["Projects", "work"],
       ["About", "about"],
+      ["Projects", "work"],
       ["Toolkit", "stack"],
       ["Goals", "goals"],
       ["Contact", "contact"],
@@ -152,7 +152,7 @@ export const copy = {
     close: "Close",
     language: "Select language",
     languageNames: { pt: "Português", en: "English" },
-    eyebrow: "ARTHUR VOLPATO · PORTFOLIO",
+    eyebrow: "Arthur Volpato · Portfolio",
     heroLine: "Software, systems",
     heroAccent: "and cybersecurity.",
     heroDescription:
@@ -160,7 +160,7 @@ export const copy = {
     viewWork: "Explore my projects",
     projectIndex: "IN FOCUS",
     indexDescription: "Open source. Technical context. Hands-on learning.",
-    workLabel: "PROJECTS",
+    workLabel: "Projects",
     workTitle: "From idea to implementation.",
     workDescription:
       "Selected projects across systems, development and security — with the thinking behind the code.",
@@ -175,15 +175,15 @@ export const copy = {
     details: "Learn more",
     sourceCode: "Source on GitHub",
     allRepos: "All repositories",
-    aboutLabel: "ABOUT",
+    aboutLabel: "About",
     aboutTitle: "Software foundations. A direction in security.",
     aboutFirst:
       "I study Software Engineering at UniCesumar and work in Help Desk N1 at an ISP/IoT company.",
     aboutSecond:
       "I build with Rust, Python and C while learning JavaScript, React and Next.js. My professional goal is a career in Information Security, exploring cyber defense, authorized offensive security and collaboration between these disciplines.",
-    careerLabel: "CAREER INTERESTS",
+    careerLabel: "Career interests",
     careerAria: "Cybersecurity career interests",
-    stackLabel: "TOOLKIT",
+    stackLabel: "Toolkit",
     stackTitle: "Tools with a purpose.",
     stackDescription:
       "My programming foundations and the technologies I use and continue learning.",
@@ -192,7 +192,7 @@ export const copy = {
       web: "Web development",
       systems: "Systems & tools",
     },
-    goalsLabel: "GOALS",
+    goalsLabel: "Goals",
     goalsTitle: "The next step is to keep learning.",
     goalsDescription:
       "Foundations, practice and projects as part of my cybersecurity journey.",
@@ -215,14 +215,14 @@ export const copy = {
     ],
     goalNote:
       "The certifications mentioned are learning goals, not credentials already earned.",
-    contactLabel: "CONTACT",
+    contactLabel: "Contact",
     contactTitle: "Let’s connect.",
     contactDescription:
       "Projects, opportunities and thoughtful conversations about technology and security. Find me here.",
     contactButton: "Connect on LinkedIn",
     footer: "Software, systems and continuous learning.",
     top: "Back to top",
-    caseLabel: "PROJECT CASE STUDY",
+    caseLabel: "Project case study",
     back: "Back to projects",
     overview: "Context & objective",
     features: "What it does",

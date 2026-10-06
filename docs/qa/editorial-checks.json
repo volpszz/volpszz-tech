@@ -1,0 +1,355 @@
+{
+  "total": 32,
+  "checks": [
+    {
+      "check": "order-colors-pt",
+      "passed": true,
+      "details": {
+        "order": [
+          "home",
+          "about",
+          "work",
+          "stack",
+          "goals",
+          "contact"
+        ],
+        "nav": [
+          "#about",
+          "#work",
+          "#stack",
+          "#goals",
+          "#contact"
+        ],
+        "goals": [
+          {
+            "text": "Certificações do mercado",
+            "color": "rgb(245, 245, 243)"
+          },
+          {
+            "text": "Labs e CTFs",
+            "color": "rgb(245, 245, 243)"
+          },
+          {
+            "text": "Conhecimento em projetos",
+            "color": "rgb(245, 245, 243)"
+          }
+        ],
+        "foreground": "rgb(245, 245, 243)"
+      }
+    },
+    {
+      "check": "responsive-pt-320",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "overflow": false,
+        "cards": 3
+      }
+    },
+    {
+      "check": "responsive-pt-390",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "overflow": false,
+        "cards": 3
+      }
+    },
+    {
+      "check": "responsive-pt-768",
+      "passed": true,
+      "details": {
+        "width": 768,
+        "overflow": false,
+        "cards": 3
+      }
+    },
+    {
+      "check": "responsive-pt-1024",
+      "passed": true,
+      "details": {
+        "width": 1024,
+        "overflow": false,
+        "cards": 3
+      }
+    },
+    {
+      "check": "responsive-pt-1440",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "overflow": false,
+        "cards": 3
+      }
+    },
+    {
+      "check": "active-nav-pt-about",
+      "passed": true,
+      "details": {
+        "hash": "#about",
+        "active": "#about"
+      }
+    },
+    {
+      "check": "active-nav-pt-work",
+      "passed": true,
+      "details": {
+        "hash": "#work",
+        "active": "#work"
+      }
+    },
+    {
+      "check": "active-nav-pt-stack",
+      "passed": true,
+      "details": {
+        "hash": "#stack",
+        "active": "#stack"
+      }
+    },
+    {
+      "check": "active-nav-pt-goals",
+      "passed": true,
+      "details": {
+        "hash": "#goals",
+        "active": "#goals"
+      }
+    },
+    {
+      "check": "active-nav-pt-contact",
+      "passed": true,
+      "details": {
+        "hash": "#contact",
+        "active": "#contact"
+      }
+    },
+    {
+      "check": "filters-pt",
+      "passed": true,
+      "details": {
+        "counts": [
+          3,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "check": "project-detail-pt",
+      "passed": true,
+      "details": {
+        "title": "Hardware Monitor",
+        "lang": "pt-BR",
+        "nav": [
+          "/volpszz-tech/#about",
+          "/volpszz-tech/#work",
+          "/volpszz-tech/#stack",
+          "/volpszz-tech/#goals",
+          "/volpszz-tech/#contact"
+        ]
+      }
+    },
+    {
+      "check": "order-colors-en",
+      "passed": true,
+      "details": {
+        "order": [
+          "home",
+          "about",
+          "work",
+          "stack",
+          "goals",
+          "contact"
+        ],
+        "nav": [
+          "#about",
+          "#work",
+          "#stack",
+          "#goals",
+          "#contact"
+        ],
+        "goals": [
+          {
+            "text": "Industry certifications",
+            "color": "rgb(245, 245, 243)"
+          },
+          {
+            "text": "Labs & CTFs",
+            "color": "rgb(245, 245, 243)"
+          },
+          {
+            "text": "Knowledge into projects",
+            "color": "rgb(245, 245, 243)"
+          }
+        ],
+        "foreground": "rgb(245, 245, 243)"
+      }
+    },
+    {
+      "check": "responsive-en-320",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "overflow": false,
+        "cards": 3
+      }
+    },
+    {
+      "check": "responsive-en-390",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "overflow": false,
+        "cards": 3
+      }
+    },
+    {
+      "check": "responsive-en-768",
+      "passed": true,
+      "details": {
+        "width": 768,
+        "overflow": false,
+        "cards": 3
+      }
+    },
+    {
+      "check": "responsive-en-1024",
+      "passed": true,
+      "details": {
+        "width": 1024,
+        "overflow": false,
+        "cards": 3
+      }
+    },
+    {
+      "check": "responsive-en-1440",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "overflow": false,
+        "cards": 3
+      }
+    },
+    {
+      "check": "active-nav-en-about",
+      "passed": true,
+      "details": {
+        "hash": "#about",
+        "active": "#about"
+      }
+    },
+    {
+      "check": "active-nav-en-work",
+      "passed": true,
+      "details": {
+        "hash": "#work",
+        "active": "#work"
+      }
+    },
+    {
+      "check": "active-nav-en-stack",
+      "passed": true,
+      "details": {
+        "hash": "#stack",
+        "active": "#stack"
+      }
+    },
+    {
+      "check": "active-nav-en-goals",
+      "passed": true,
+      "details": {
+        "hash": "#goals",
+        "active": "#goals"
+      }
+    },
+    {
+      "check": "active-nav-en-contact",
+      "passed": true,
+      "details": {
+        "hash": "#contact",
+        "active": "#contact"
+      }
+    },
+    {
+      "check": "filters-en",
+      "passed": true,
+      "details": {
+        "counts": [
+          3,
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "check": "project-detail-en",
+      "passed": true,
+      "details": {
+        "title": "Hardware Monitor",
+        "lang": "en",
+        "nav": [
+          "/volpszz-tech/#about",
+          "/volpszz-tech/#work",
+          "/volpszz-tech/#stack",
+          "/volpszz-tech/#goals",
+          "/volpszz-tech/#contact"
+        ]
+      }
+    },
+    {
+      "check": "case-hardware-monitor-320",
+      "passed": true,
+      "details": {
+        "overflow": false,
+        "title": "Hardware Monitor",
+        "sections": 6
+      }
+    },
+    {
+      "check": "case-hardware-monitor-1440",
+      "passed": true,
+      "details": {
+        "overflow": false,
+        "title": "Hardware Monitor",
+        "sections": 6
+      }
+    },
+    {
+      "check": "case-cybershield-website-320",
+      "passed": true,
+      "details": {
+        "overflow": false,
+        "title": "CyberShield",
+        "sections": 6
+      }
+    },
+    {
+      "check": "case-cybershield-website-1440",
+      "passed": true,
+      "details": {
+        "overflow": false,
+        "title": "CyberShield",
+        "sections": 6
+      }
+    },
+    {
+      "check": "case-simple-port-scanner-320",
+      "passed": true,
+      "details": {
+        "overflow": false,
+        "title": "TCP Port Scanner",
+        "sections": 6
+      }
+    },
+    {
+      "check": "case-simple-port-scanner-1440",
+      "passed": true,
+      "details": {
+        "overflow": false,
+        "title": "TCP Port Scanner",
+        "sections": 6
+      }
+    }
+  ]
+}

@@ -40,7 +40,7 @@ export function SiteHeader({
 
   useEffect(() => {
     if (!home) return;
-    const ids = ["home", "work", "about", "stack", "goals", "contact"];
+    const ids = ["home", "about", "work", "stack", "goals", "contact"];
     let frame = 0;
     const update = () => {
       frame = 0;
