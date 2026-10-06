@@ -18,7 +18,6 @@ import {
   SiteFooter,
   SiteHeader,
 } from "./components/site-shell";
-import { ProjectArtwork } from "./components/project-artwork";
 
 export default function Portfolio() {
   const { locale } = useLanguage();
@@ -57,24 +56,6 @@ export default function Portfolio() {
               </a>
             </div>
           </div>
-          <aside className="project-index" aria-label={t.projectIndex}>
-            <p className="eyebrow">{t.projectIndex}</p>
-            {projects.map((project, index) => (
-              <Link
-                href={`/projects/${project.slug}/`}
-                key={project.slug}
-                className="index-project"
-              >
-                <span className="index-number">0{index + 1}</span>
-                <div>
-                  <strong>{project.name}</strong>
-                  <span>{t.filters[project.category]}</span>
-                </div>
-                <Arrow diagonal />
-              </Link>
-            ))}
-            <p className="index-note">{t.indexDescription}</p>
-          </aside>
         </section>
 
         <section id="work" className="work-section section-band">
@@ -110,34 +91,14 @@ export default function Portfolio() {
                 <Arrow diagonal />
               </a>
             </div>
-            <div
-              className={`projects-grid${visibleProjects.length === 1 ? " single" : ""}`}
-              aria-live="polite"
-            >
+            <div className="projects-grid" aria-live="polite">
               {visibleProjects.map((project) => (
-                <article
-                  key={project.slug}
-                  className={`project-card${project.slug === "hardware-monitor" ? " featured" : ""}`}
-                >
-                  <Link
-                    className="project-cover"
-                    href={`/projects/${project.slug}/`}
-                    aria-label={`${t.details}: ${project.name}`}
-                  >
-                    <ProjectArtwork project={project} locale={locale} />
-                  </Link>
+                <article key={project.slug} className="project-card">
                   <div className="project-text">
                     <div className="project-meta">
                       <span>{t.filters[project.category]}</span>
-                      {project.slug === "hardware-monitor" && (
-                        <span className="featured-label">{t.featured}</span>
-                      )}
                     </div>
-                    <h3>
-                      <Link href={`/projects/${project.slug}/`}>
-                        {project.name}
-                      </Link>
-                    </h3>
+                    <h3>{project.name}</h3>
                     <p>{project.summary[locale]}</p>
                     <div className="tags">
                       {project.stack.slice(0, 4).map((tag) => (
@@ -148,6 +109,7 @@ export default function Portfolio() {
                       <Link
                         className="text-link case-link"
                         href={`/projects/${project.slug}/`}
+                        aria-label={`${t.details}: ${project.name}`}
                       >
                         {t.details}
                         <Arrow />

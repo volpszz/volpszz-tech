@@ -1,0 +1,269 @@
+{
+  "total": 26,
+  "checks": [
+    {
+      "check": "unique-cards-pt",
+      "passed": true,
+      "details": {
+        "names": [
+          "Hardware Monitor",
+          "CyberShield",
+          "TCP Port Scanner",
+          "Linguagens",
+          "Desenvolvimento web",
+          "Sistemas e ferramentas",
+          "Certificações do mercado",
+          "Labs e CTFs",
+          "Conhecimento em projetos"
+        ],
+        "cards": 3,
+        "links": [
+          {
+            "text": "Saiba mais",
+            "label": "Saiba mais: Hardware Monitor",
+            "href": "http://127.0.0.1:3103/volpszz-tech/projects/hardware-monitor/"
+          },
+          {
+            "text": "Saiba mais",
+            "label": "Saiba mais: CyberShield",
+            "href": "http://127.0.0.1:3103/volpszz-tech/projects/cybershield-website/"
+          },
+          {
+            "text": "Saiba mais",
+            "label": "Saiba mais: TCP Port Scanner",
+            "href": "http://127.0.0.1:3103/volpszz-tech/projects/simple-port-scanner/"
+          }
+        ],
+        "index": false,
+        "art": 0
+      }
+    },
+    {
+      "check": "filter-pt-0",
+      "passed": true,
+      "details": 3
+    },
+    {
+      "check": "filter-pt-1",
+      "passed": true,
+      "details": 1
+    },
+    {
+      "check": "filter-pt-2",
+      "passed": true,
+      "details": 1
+    },
+    {
+      "check": "filter-pt-3",
+      "passed": true,
+      "details": 1
+    },
+    {
+      "check": "responsive-pt-320",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "overflow": false,
+        "columns": "280px"
+      }
+    },
+    {
+      "check": "responsive-pt-390",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "overflow": false,
+        "columns": "350px"
+      }
+    },
+    {
+      "check": "responsive-pt-768",
+      "passed": true,
+      "details": {
+        "width": 768,
+        "overflow": false,
+        "columns": "337.5px 337.5px"
+      }
+    },
+    {
+      "check": "responsive-pt-1024",
+      "passed": true,
+      "details": {
+        "width": 1024,
+        "overflow": false,
+        "columns": "303px 303px 303px"
+      }
+    },
+    {
+      "check": "responsive-pt-1440",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "overflow": false,
+        "columns": "372px 372px 372px"
+      }
+    },
+    {
+      "check": "detail-link-pt-hardware-monitor",
+      "passed": true,
+      "details": {
+        "path": "/volpszz-tech/projects/hardware-monitor/",
+        "title": "Hardware Monitor",
+        "lang": "pt-BR",
+        "sections": 6
+      }
+    },
+    {
+      "check": "detail-link-pt-cybershield-website",
+      "passed": true,
+      "details": {
+        "path": "/volpszz-tech/projects/cybershield-website/",
+        "title": "CyberShield",
+        "lang": "pt-BR",
+        "sections": 6
+      }
+    },
+    {
+      "check": "detail-link-pt-simple-port-scanner",
+      "passed": true,
+      "details": {
+        "path": "/volpszz-tech/projects/simple-port-scanner/",
+        "title": "TCP Port Scanner",
+        "lang": "pt-BR",
+        "sections": 6
+      }
+    },
+    {
+      "check": "unique-cards-en",
+      "passed": true,
+      "details": {
+        "names": [
+          "Hardware Monitor",
+          "CyberShield",
+          "TCP Port Scanner",
+          "Languages",
+          "Web development",
+          "Systems & tools",
+          "Industry certifications",
+          "Labs & CTFs",
+          "Knowledge into projects"
+        ],
+        "cards": 3,
+        "links": [
+          {
+            "text": "Learn more",
+            "label": "Learn more: Hardware Monitor",
+            "href": "http://127.0.0.1:3103/volpszz-tech/projects/hardware-monitor/"
+          },
+          {
+            "text": "Learn more",
+            "label": "Learn more: CyberShield",
+            "href": "http://127.0.0.1:3103/volpszz-tech/projects/cybershield-website/"
+          },
+          {
+            "text": "Learn more",
+            "label": "Learn more: TCP Port Scanner",
+            "href": "http://127.0.0.1:3103/volpszz-tech/projects/simple-port-scanner/"
+          }
+        ],
+        "index": false,
+        "art": 0
+      }
+    },
+    {
+      "check": "filter-en-0",
+      "passed": true,
+      "details": 3
+    },
+    {
+      "check": "filter-en-1",
+      "passed": true,
+      "details": 1
+    },
+    {
+      "check": "filter-en-2",
+      "passed": true,
+      "details": 1
+    },
+    {
+      "check": "filter-en-3",
+      "passed": true,
+      "details": 1
+    },
+    {
+      "check": "responsive-en-320",
+      "passed": true,
+      "details": {
+        "width": 320,
+        "overflow": false,
+        "columns": "280px"
+      }
+    },
+    {
+      "check": "responsive-en-390",
+      "passed": true,
+      "details": {
+        "width": 390,
+        "overflow": false,
+        "columns": "350px"
+      }
+    },
+    {
+      "check": "responsive-en-768",
+      "passed": true,
+      "details": {
+        "width": 768,
+        "overflow": false,
+        "columns": "337.5px 337.5px"
+      }
+    },
+    {
+      "check": "responsive-en-1024",
+      "passed": true,
+      "details": {
+        "width": 1024,
+        "overflow": false,
+        "columns": "303px 303px 303px"
+      }
+    },
+    {
+      "check": "responsive-en-1440",
+      "passed": true,
+      "details": {
+        "width": 1440,
+        "overflow": false,
+        "columns": "372px 372px 372px"
+      }
+    },
+    {
+      "check": "detail-link-en-hardware-monitor",
+      "passed": true,
+      "details": {
+        "path": "/volpszz-tech/projects/hardware-monitor/",
+        "title": "Hardware Monitor",
+        "lang": "en",
+        "sections": 6
+      }
+    },
+    {
+      "check": "detail-link-en-cybershield-website",
+      "passed": true,
+      "details": {
+        "path": "/volpszz-tech/projects/cybershield-website/",
+        "title": "CyberShield",
+        "lang": "en",
+        "sections": 6
+      }
+    },
+    {
+      "check": "detail-link-en-simple-port-scanner",
+      "passed": true,
+      "details": {
+        "path": "/volpszz-tech/projects/simple-port-scanner/",
+        "title": "TCP Port Scanner",
+        "lang": "en",
+        "sections": 6
+      }
+    }
+  ]
+}
