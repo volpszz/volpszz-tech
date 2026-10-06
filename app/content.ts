@@ -22,7 +22,7 @@ export const careerAreas: Localized<string[]> = {
 };
 export const toolkit = [
   { id: "languages", items: ["Rust", "Python", "C", "JavaScript"] },
-  { id: "web", items: ["HTML", "CSS", "React", "Next.js"] },
+  { id: "web", items: ["HTML", "CSS"] },
   {
     id: "systems",
     items: ["Linux", "Bash", "PowerShell", "Git", "GitHub", "Windows"],
@@ -53,7 +53,7 @@ export const copy = {
     heroLine: "Software, sistemas",
     heroAccent: "e cibersegurança.",
     heroDescription:
-      "Estudante de Engenharia de Software e profissional de suporte de TI. Desenvolvo projetos com Rust, Python e C enquanto construo minha trajetória em Segurança da Informação.",
+      "Estudante de Engenharia de Software e profissional de suporte de TI. Desenvolvo projetos com Rust, Python, C e JavaScript enquanto construo minha trajetória em Segurança da Informação.",
     viewWork: "Conheça os projetos",
     projectIndex: "EM DESTAQUE",
     indexDescription:
@@ -78,7 +78,7 @@ export const copy = {
     aboutFirst:
       "Estudo Engenharia de Software na UniCesumar e trabalho como Help Desk N1 em uma empresa de ISP/IoT.",
     aboutSecond:
-      "Construo com Rust, Python e C e estou aprendendo JavaScript, React e Next.js. Meu objetivo profissional é desenvolver carreira em Segurança da Informação, explorando defesa cibernética, segurança ofensiva autorizada e a colaboração entre essas frentes.",
+      "Minha stack inclui Rust, Python, C e JavaScript, além de HTML e CSS. Meu objetivo profissional é desenvolver carreira em Segurança da Informação, explorando defesa cibernética, segurança ofensiva autorizada e a colaboração entre essas frentes.",
     careerLabel: "Frentes de interesse",
     careerAria: "Interesses de carreira em cibersegurança",
     stackLabel: "Tecnologias",
@@ -166,7 +166,7 @@ export const copy = {
     heroLine: "Software, systems",
     heroAccent: "and cybersecurity.",
     heroDescription:
-      "Software Engineering student and IT support professional. I build projects with Rust, Python and C while developing my path into Information Security.",
+      "Software Engineering student and IT support professional. I build projects with Rust, Python, C and JavaScript while developing my path into Information Security.",
     viewWork: "Explore my projects",
     projectIndex: "IN FOCUS",
     indexDescription: "Open source. Technical context. Hands-on learning.",
@@ -190,7 +190,7 @@ export const copy = {
     aboutFirst:
       "I study Software Engineering at UniCesumar and work in Help Desk N1 at an ISP/IoT company.",
     aboutSecond:
-      "I build with Rust, Python and C while learning JavaScript, React and Next.js. My professional goal is a career in Information Security, exploring cyber defense, authorized offensive security and collaboration between these disciplines.",
+      "My stack includes Rust, Python, C and JavaScript, along with HTML and CSS. My professional goal is a career in Information Security, exploring cyber defense, authorized offensive security and collaboration between these disciplines.",
     careerLabel: "Career interests",
     careerAria: "Cybersecurity career interests",
     stackLabel: "Toolkit",
