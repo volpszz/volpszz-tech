@@ -8,11 +8,11 @@
   --surface-alt: #1c1c1c;
   --text-secondary: #c9c8c5;
   --text-muted: #a5a5a1;
-  --accent: #8fb6e8;
-  --accent-hover: #b5d0f2;
-  --accent-tint: #8fb6e812;
-  --accent-line: #8fb6e84a;
-  --on-accent: #0b1727;
+  --accent: #e3bf69;
+  --accent-hover: #f1d79d;
+  --accent-tint: #e3bf6912;
+  --accent-line: #e3bf694a;
+  --on-accent: #211b0e;
   --border: #ffffff12;
   --border-strong: #ffffff25;
 }
@@ -130,7 +130,7 @@ button:focus-visible {
 }
 .navigation a[aria-current="location"] {
   background: var(--surface-raised);
-  color: var(--foreground);
+  color: var(--accent);
 }
 .navigation a[aria-current="location"]::after {
   content: "";
@@ -139,7 +139,7 @@ button:focus-visible {
   left: 14px;
   right: 14px;
   height: 1px;
-  background: var(--text-secondary);
+  background: var(--accent);
 }
 .header-controls {
   display: flex;
@@ -324,6 +324,7 @@ h1 {
   display: flex;
   align-items: center;
   gap: 14px;
+  color: var(--accent);
 }
 .section-number {
   display: none;
