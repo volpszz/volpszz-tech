@@ -84,7 +84,7 @@ export default function Portfolio() {
                   role="group"
                   aria-label={t.careerAria}
                 >
-                  {careerAreas.map((area) => (
+                  {careerAreas[locale].map((area) => (
                     <span key={area}>{area}</span>
                   ))}
                 </div>

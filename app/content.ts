@@ -4,12 +4,22 @@ type Localized<T> = Record<Locale, T>;
 
 export const github = "https://github.com/volpszz";
 export const linkedin = "https://www.linkedin.com/in/arthur-volpatoo/";
-export const careerAreas = [
-  "Blue Team",
-  "Red Team",
-  "Purple Team",
-  "Security Engineering",
-];
+export const careerAreas: Localized<string[]> = {
+  pt: [
+    "Analista de Segurança",
+    "Blue Team",
+    "Red Team",
+    "Purple Team",
+    "Security Engineering",
+  ],
+  en: [
+    "Security Analyst",
+    "Blue Team",
+    "Red Team",
+    "Purple Team",
+    "Security Engineering",
+  ],
+};
 export const toolkit = [
   { id: "languages", items: ["Rust", "Python", "C", "JavaScript"] },
   { id: "web", items: ["HTML", "CSS", "React", "Next.js"] },
