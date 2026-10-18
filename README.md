@@ -29,7 +29,7 @@ Gold highlights section labels, the “Arthur Volpato · Portfólio/Portfolio”
 
 ## Projects and content
 
-The curated catalog currently includes Hardware Monitor, CyberShield and TCP Port Scanner. It does not automatically synchronize with GitHub. Architecture diagrams are explanatory illustrations, not screenshots or live measurements. The portfolio does not execute the projects, run a scanner or provide a security service; CyberShield is described as an educational application.
+The curated catalog currently includes Hardware Monitor, CyberShield and TCP/UDP Port Scanner. It does not automatically synchronize with GitHub. Architecture diagrams are explanatory illustrations, not screenshots or live measurements. The portfolio does not execute the projects, run a scanner or provide a security service; CyberShield is described as an educational application.
 
 Goals include industry certifications such as CompTIA Network+ and Security+, authorized cyber labs/CTFs and security-focused projects. These are learning objectives, not completed achievements or credentials already earned.
 
@@ -86,7 +86,7 @@ The build checks TypeScript and writes the static site to `out/`. Although a `st
 
 Current categories are `systems`, `web` and `security`. A new category also requires changes to `Category`, PT/EN filter labels and the home filter list.
 
-Repository links currently use `github + "/" + project.slug`, so the slug must match a repository name under `volpszz`. To support a different owner/name, add an explicit repository URL to the data model and update home/detail/README link consumers. Do not silently link to a nonexistent repository.
+Repository links use the optional `repositoryUrl`, falling back to `github + "/" + project.slug`. Set `repositoryUrl` when the repository name differs from the site route. The scanner links to `https://github.com/volpszz/port-scanner` while preserving `/projects/simple-port-scanner/` so existing study links remain valid. Its PT/EN study covers the current modular TCP/UDP implementation, configurable CLI, automated tests and Portuguese Markdown/PDF guide. Do not silently link to a nonexistent repository.
 
 Interface translations live in `copy.pt` and `copy.en`. Project metadata is statically generated from the Portuguese summary; language switching does not create separate locale URLs or translated static metadata.
 

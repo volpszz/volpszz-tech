@@ -151,7 +151,7 @@ export default function Portfolio() {
                       </Link>
                       <a
                         className="source-link"
-                        href={`${github}/${project.slug}`}
+                        href={project.repositoryUrl ?? `${github}/${project.slug}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={`${t.sourceCode}: ${project.name}`}

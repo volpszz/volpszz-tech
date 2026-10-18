@@ -18,7 +18,7 @@ export function ProjectArtwork({
       locale === "pt"
         ? "cybershield / fluxo HTTP"
         : "cybershield / request flow",
-    scanner: "port-scanner / TCP",
+    scanner: "port-scanner / TCP + UDP",
   };
   return (
     <figure className={`project-artwork artwork-${project.visual}`}>
@@ -81,20 +81,20 @@ export function ProjectArtwork({
         ) : (
           <div className="scanner-diagram">
             <div className="diagram-title">
-              TCP Port Scanner<span>PYTHON / SOCKET</span>
+              TCP/UDP Port Scanner<span>PYTHON / SOCKET</span>
             </div>
             <pre>
               <code>
                 <span className="code-muted">
                   # {locale === "pt" ? "Conceito central" : "Core concept"}
                 </span>
-                {"\n"}result = s.connect_ex((rHostIP, ports))
+                {"\n"}ScanConfig → scan() → ScanResult
               </code>
             </pre>
             <div className="scan-flow">
               <span>{locale === "pt" ? "Resolver" : "Resolve"}</span>
               <i>→</i>
-              <span>TCP</span>
+              <span>TCP / UDP</span>
               <i>→</i>
               <span>{locale === "pt" ? "Reportar" : "Report"}</span>
             </div>

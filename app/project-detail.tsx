@@ -31,7 +31,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
               <span>{project.platform[locale]}</span>
               <span>{project.stack[0]}</span>
               <a
-                href={`${github}/${project.slug}`}
+                href={project.repositoryUrl ?? `${github}/${project.slug}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -129,7 +129,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
                 <p>{t.sourceNote}</p>
                 <a
                   className="button secondary"
-                  href={`${github}/${project.slug}#readme`}
+                  href={`${project.repositoryUrl ?? `${github}/${project.slug}`}#readme`}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

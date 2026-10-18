@@ -140,7 +140,7 @@ export const copy = {
     artLabels: {
       hardware: "COLETA → IDENTIFICAÇÃO → SENSORES → TERMINAL",
       web: "NAVEGADOR → API → PERSISTÊNCIA",
-      scanner: "RESOLUÇÃO → CONEXÃO TCP → RESULTADO",
+      scanner: "CONFIGURAÇÃO → TCP / UDP → RESULTADO",
     },
   },
   en: {
@@ -252,13 +252,14 @@ export const copy = {
     artLabels: {
       hardware: "COLLECT → IDENTIFY → SENSORS → TERMINAL",
       web: "BROWSER → API → PERSISTENCE",
-      scanner: "RESOLVE → TCP CONNECT → REPORT",
+      scanner: "CONFIGURE → TCP / UDP → REPORT",
     },
   },
 };
 
 export type Project = {
   slug: string;
+  repositoryUrl?: string;
   name: string;
   category: Category;
   visual: "hardware" | "web" | "scanner";
@@ -556,126 +557,141 @@ export const projects: Project[] = [
   },
   {
     slug: "simple-port-scanner",
-    name: "TCP Port Scanner",
+    repositoryUrl: "https://github.com/volpszz/port-scanner",
+    name: "TCP/UDP Port Scanner",
     category: "security",
     visual: "scanner",
-    stack: ["Python", "socket", "TCP/IP"],
+    stack: ["Python", "socket", "TCP / UDP", "unittest"],
     platform: {
-      pt: "Ferramenta de terminal · uso educacional",
-      en: "Terminal tool · educational use",
+      pt: "Python 3.10+ · terminal · IPv4",
+      en: "Python 3.10+ · terminal · IPv4",
     },
     summary: {
-      pt: "Um scanner TCP educacional para praticar sockets, resolução de nomes e fundamentos de redes.",
-      en: "An educational TCP scanner for practicing sockets, hostname resolution and networking fundamentals.",
+      pt: "Um scanner TCP/UDP educacional em Python, com arquitetura modular, CLI configurável, testes automatizados e guia de estudo.",
+      en: "An educational Python TCP/UDP scanner with a modular architecture, configurable CLI, automated tests and a study guide.",
     },
     overview: {
       pt: [
-        "Este projeto usa o módulo socket da biblioteca padrão do Python para investigar como uma conexão TCP pode indicar que uma porta aceita conexões. É um exercício direto de programação e fundamentos de reconhecimento de rede.",
-        "A implementação recebe um alvo, resolve seu endereço IPv4 e percorre uma lista definida de portas. O foco é entender o mecanismo e tratar os resultados, não oferecer um scanner completo ou realizar uma auditoria de vulnerabilidades.",
+        "O port-scanner explora conexões TCP, sondagens UDP e resolução de nomes IPv4 com a biblioteca padrão do Python, sem dependências externas de execução. O objetivo é estudar redes e interpretar respostas sem confundir silêncio, recusa e confirmação de uma porta aberta.",
+        "A implementação foi organizada no pacote port_scanner, separando configuração, sondagens, orquestração e interface. Pode ser usada pelo menu interativo, por argumentos de linha de comando ou como biblioteca. O repositório inclui testes automatizados, documentação de arquitetura e um guia detalhado em português, em Markdown e PDF.",
       ],
       en: [
-        "This project uses Python’s standard-library socket module to investigate how a TCP connection can indicate that a port accepts connections. It is a focused programming and network-reconnaissance fundamentals exercise.",
-        "The implementation receives a target, resolves its IPv4 address and iterates over a predefined port list. The focus is understanding the mechanism and handling results, not providing a complete scanner or a vulnerability audit.",
+        "port-scanner explores TCP connections, UDP probes and IPv4 hostname resolution using Python’s standard library, with no third-party runtime dependencies. Its goal is to study networking and interpret responses without confusing silence, refusal and confirmation of an open port.",
+        "The implementation is organized in the port_scanner package, separating configuration, probes, orchestration and the interface. It supports an interactive menu, command-line arguments and library use. The repository includes automated tests, architecture documentation and a detailed Portuguese study guide in Markdown and PDF.",
       ],
     },
     features: {
       pt: [
-        "Resolução de hostname para endereço IPv4.",
-        "Tentativas de conexão TCP com socket.connect_ex().",
-        "Detecção de portas que aceitam conexão e timeout padrão definido no código.",
-        "Interrupção por teclado e resultado no terminal.",
+        "Menu interativo e CLI via python main.py ou python -m port_scanner, com TCP, UDP ou ambos.",
+        "Alvo IPv4 ou hostname, portas configuráveis por --ports e timeout por --timeout; --protocol seleciona os protocolos.",
+        "Resultados no formato porta/protocolo: estado, distinguindo open, closed, filtered/unknown, open|filtered e erros de rede.",
+        "Configuração validada antes da resolução do alvo, remoção de portas repetidas sem alterar a ordem e fechamento de sockets por context managers.",
+        "Testes com unittest por camada e integração com sockets reais em 127.0.0.1, sem depender de hosts públicos.",
       ],
       en: [
-        "Hostname resolution to an IPv4 address.",
-        "TCP connection attempts using socket.connect_ex().",
-        "Identification of ports accepting connections and a default timeout set in code.",
-        "Keyboard interruption and terminal output.",
+        "Interactive menu and CLI through python main.py or python -m port_scanner, with TCP, UDP or both.",
+        "IPv4 address or hostname target, configurable --ports and --timeout; --protocol selects the protocols.",
+        "Results formatted as port/protocol: state, distinguishing open, closed, filtered/unknown, open|filtered and network errors.",
+        "Configuration validated before target resolution, duplicate ports removed without reordering and sockets closed through context managers.",
+        "Layered unittest coverage and integration with real sockets on 127.0.0.1, without relying on public hosts.",
       ],
     },
     flow: {
       pt: [
         {
-          title: "Resolver o alvo",
-          text: "O hostname ou endereço informado é convertido em um endereço IPv4 antes das tentativas de conexão.",
+          title: "Configurar",
+          text: "cli.py interpreta argumentos ou o menu e cria ScanConfig em config.py. Alvo, portas, protocolos e timeout são validados; os padrões continuam sendo 53, 22, 80, 111, 139, 443 e 32768, com timeout de 1 segundo por operação de socket.",
         },
         {
-          title: "Percorrer as portas",
-          text: "A lista documentada contém 53, 22, 80, 111, 139, 443 e 32768. A ferramenta percorre essas portas sequencialmente.",
+          title: "Resolver e orquestrar",
+          text: "scanner.py resolve o alvo uma vez para um endereço IPv4 e produz resultados por um gerador. A execução é sequencial: para cada porta, percorre os protocolos solicitados na ordem configurada.",
         },
         {
-          title: "Testar a conexão",
-          text: "socket.connect_ex() devolve um código de resultado. Uma conexão aceita é reportada como uma porta aberta; timeout e falhas precisam ser tratados como resultados distintos de uma confirmação de serviço.",
+          title: "Sondar TCP e UDP",
+          text: "probes.py usa connect_ex no TCP e envia o datagrama genérico b'probe' no UDP, aguardando resposta. Cada socket recebe seu próprio timeout antes das operações e é fechado mesmo em caso de exceção.",
         },
         {
-          title: "Reportar",
-          text: "O terminal mostra as portas que aceitaram conexão. A presença de uma porta aberta, sozinha, não prova uma vulnerabilidade.",
+          title: "Interpretar e apresentar",
+          text: "ScanResult reúne endereço, porta, protocolo e estado. A CLI imprime resultados em stdout e erros de configuração, resolução ou interrupção em stderr; um erro de rede individual não interrompe as próximas sondagens.",
         },
       ],
       en: [
         {
-          title: "Resolve the target",
-          text: "The supplied hostname or address is resolved to an IPv4 address before connection attempts.",
+          title: "Configure",
+          text: "cli.py parses arguments or the menu and creates ScanConfig in config.py. Target, ports, protocols and timeout are validated; defaults remain 53, 22, 80, 111, 139, 443 and 32768, with a 1-second timeout per socket operation.",
         },
         {
-          title: "Iterate over ports",
-          text: "The documented list contains 53, 22, 80, 111, 139, 443 and 32768. The tool iterates over these ports sequentially.",
+          title: "Resolve & orchestrate",
+          text: "scanner.py resolves the target once to one IPv4 address and yields results through a generator. Execution is sequential: for each port, it iterates over the requested protocols in configured order.",
         },
         {
-          title: "Attempt a connection",
-          text: "socket.connect_ex() returns a result code. An accepted connection is reported as an open port; timeouts and failures must not be confused with confirmation of a service.",
+          title: "Probe TCP & UDP",
+          text: "probes.py uses connect_ex for TCP and sends the generic b'probe' UDP datagram, waiting for a response. Each socket receives its own timeout before operations and is closed even on exceptions.",
         },
         {
-          title: "Report",
-          text: "The terminal reports ports accepting connections. An open port alone does not establish a vulnerability.",
+          title: "Interpret & present",
+          text: "ScanResult holds the address, port, protocol and state. The CLI prints results to stdout and configuration, resolution or interruption errors to stderr; an individual network error does not stop subsequent probes.",
         },
       ],
     },
     decisions: {
       pt: [
         {
-          title: "Biblioteca padrão",
-          text: "O módulo socket mantém a implementação pequena e deixa o funcionamento de TCP visível, sem esconder o exercício atrás de uma ferramenta externa.",
+          title: "Módulos com responsabilidades claras",
+          text: "Configuração e resultados imutáveis separam regras de entrada da execução. O scanner não conhece o terminal; connection.py preserva nomes legados como fachada, sem duplicar sondagens.",
         },
         {
-          title: "Escopo intencionalmente simples",
-          text: "Uma lista de portas e testes sequenciais deixam o fluxo fácil de acompanhar. A simplicidade ajuda a estudar resolução, conexão, timeout e tratamento de erros.",
+          title: "Estados sem falsa certeza",
+          text: "TCP aberto exige conexão aceita; UDP aberto exige resposta. Timeout TCP produz filtered/unknown e silêncio UDP produz open|filtered, sem afirmar que existe firewall ou que a porta está fechada.",
+        },
+        {
+          title: "Simplicidade e testabilidade",
+          text: "Biblioteca padrão, execução sequencial e funções substituíveis mantêm o fluxo legível. Os testes isolam configuração, CLI e orquestração, além de exercitar TCP e UDP no loopback.",
         },
       ],
       en: [
         {
-          title: "Standard library",
-          text: "The socket module keeps the implementation small and makes TCP behavior visible instead of hiding the exercise behind an external tool.",
+          title: "Clear module responsibilities",
+          text: "Immutable configuration and results separate input rules from execution. The scanner does not know about the terminal; connection.py preserves legacy names as a facade without duplicating probes.",
         },
         {
-          title: "Deliberately limited scope",
-          text: "A port list and sequential checks make the flow easy to follow. This simplicity supports studying resolution, connections, timeouts and error handling.",
+          title: "States without false certainty",
+          text: "Open TCP requires an accepted connection; open UDP requires a response. A TCP timeout produces filtered/unknown and UDP silence produces open|filtered, without claiming a firewall exists or the port is closed.",
+        },
+        {
+          title: "Simplicity & testability",
+          text: "The standard library, sequential execution and replaceable functions keep the flow readable. Tests isolate configuration, CLI and orchestration, and exercise TCP and UDP on loopback.",
         },
       ],
     },
     lessons: {
       pt: [
-        "Programação com sockets, códigos de retorno e timeout em Python.",
-        "Conexões TCP e resolução de nomes em redes IPv4.",
-        "Reconhecimento responsável e interpretação cuidadosa de resultados.",
+        "Sockets TCP/UDP, resolução IPv4 e interpretação de recusas, respostas e timeouts.",
+        "Arquitetura modular, configuração imutável, geradores e separação entre biblioteca e CLI.",
+        "Testes unitários e de integração locais, compatibilidade e documentação técnica reproduzível.",
+        "Reconhecimento responsável e limites do que uma sondagem realmente demonstra.",
       ],
       en: [
-        "Socket programming, return codes and timeouts in Python.",
-        "TCP connections and hostname resolution in IPv4 networks.",
-        "Responsible reconnaissance and careful interpretation of results.",
+        "TCP/UDP sockets, IPv4 resolution and interpretation of refusals, responses and timeouts.",
+        "Modular architecture, immutable configuration, generators and library/CLI separation.",
+        "Local unit and integration tests, compatibility and reproducible technical documentation.",
+        "Responsible reconnaissance and the limits of what a probe actually demonstrates.",
       ],
     },
     limitations: {
       pt: [
-        "Uso somente em sistemas próprios ou com autorização explícita.",
-        "A implementação usa IPv4, uma lista fixa de portas e verificações sequenciais.",
-        "Tratamento de erros de rede e fechamento consistente de sockets são pontos de evolução. O timeout padrão é definido após criar o socket, por isso sua aplicação à primeira conexão precisa de revisão.",
-        "Não identifica versões de serviços, não verifica vulnerabilidades e não substitui ferramentas especializadas ou uma avaliação de segurança.",
+        "Uso somente em sistemas próprios ou com autorização explícita. O programa não verifica essa autorização; conexões e sondagens podem gerar logs e alertas.",
+        "Apenas IPv4 e um endereço por alvo, com execução sequencial. Não há IPv6, SYN scan, descoberta de hosts, varredura de sub-redes ou paralelismo; --ports aceita números separados por vírgulas, não intervalos.",
+        "O payload UDP genérico pode ser ignorado por serviços abertos; ausência de resposta não distingue porta aberta de tráfego filtrado. A entrega de recusas UDP depende do sistema operacional.",
+        "O timeout vale por operação de socket, não é um prazo global e não limita a resolução DNS. A validação documentada foi feita em Linux com Python 3.14.7; outras versões não foram exercitadas nessa validação.",
+        "Não identifica serviços, versões ou vulnerabilidades e não substitui ferramentas especializadas ou uma avaliação de segurança. O portfólio apenas apresenta o projeto; não executa varreduras.",
       ],
       en: [
-        "Use only on owned systems or with explicit authorization.",
-        "The implementation uses IPv4, a fixed port list and sequential checks.",
-        "Network error handling and consistent socket cleanup are areas for improvement. The default timeout is set after socket creation, so its application to the first connection needs review.",
-        "It does not identify service versions, verify vulnerabilities or replace specialized tools or a security assessment.",
+        "Use only on owned systems or with explicit authorization. The program does not verify that authorization; connections and probes may generate logs and alerts.",
+        "IPv4 only, one address per target and sequential execution. No IPv6, SYN scans, host discovery, subnet scans or parallelism; --ports accepts comma-separated numbers, not ranges.",
+        "Open services may ignore the generic UDP payload; no response cannot distinguish an open port from filtered traffic. UDP refusal delivery depends on the operating system.",
+        "The timeout applies per socket operation, not as a global deadline, and does not bound DNS resolution. Documented validation used Linux with Python 3.14.7; other versions were not exercised in that validation.",
+        "It does not identify services, versions or vulnerabilities and does not replace specialized tools or a security assessment. The portfolio only presents the project; it does not run scans.",
       ],
     },
   },
