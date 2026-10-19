@@ -19,6 +19,7 @@ export function ProjectArtwork({
         ? "cybershield / fluxo HTTP"
         : "cybershield / request flow",
     scanner: "port-scanner / TCP + UDP",
+    scraper: locale === "pt" ? "web-scraper / extração HTML" : "web-scraper / HTML extraction",
   };
   return (
     <figure className={`project-artwork artwork-${project.visual}`}>
@@ -76,6 +77,27 @@ export function ProjectArtwork({
               <span>Express</span>
               <i>→</i>
               <span>SQLite</span>
+            </div>
+          </div>
+        ) : project.visual === "scraper" ? (
+          <div className="scraper-diagram">
+            <div className="diagram-title">
+              Web Scraper v1<span>REQUESTS / BEAUTIFUL SOUP / JSON</span>
+            </div>
+            <div className="scraper-pipeline">
+              <span>URL</span><i>→</i><span>GET</span><i>→</i><span>HTML</span><i>→</i><strong>JSON</strong>
+            </div>
+            <div className="request-line">
+              <b>01</b><code>Content-Type → text/html · application/xhtml+xml</code>
+            </div>
+            <div className="request-line">
+              <b>02</b><code>{locale === "pt" ? "title + a[href] → links únicos" : "title + a[href] → unique links"}</code>
+            </div>
+            <div className="request-line">
+              <b>03</b><code>results/result.json</code>
+            </div>
+            <div className="diagram-foot">
+              {locale === "pt" ? "Diagrama conceitual · Uma página, sem JavaScript ou login." : "Conceptual diagram · One page, no JavaScript or login."}
             </div>
           </div>
         ) : (

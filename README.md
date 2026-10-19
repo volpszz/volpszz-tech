@@ -29,7 +29,7 @@ Gold highlights section labels, the “Arthur Volpato · Portfólio/Portfolio”
 
 ## Projects and content
 
-The curated catalog currently includes Hardware Monitor, CyberShield and TCP/UDP Port Scanner. It does not automatically synchronize with GitHub. Architecture diagrams are explanatory illustrations, not screenshots or live measurements. The portfolio does not execute the projects, run a scanner or provide a security service; CyberShield is described as an educational application.
+The curated catalog currently includes Web Scraper v1, Hardware Monitor, CyberShield and TCP/UDP Port Scanner. Web Scraper v1 has a PT/EN case study and its own URL → HTTP → HTML → JSON diagram; authenticated-site scraping in v2 is explicitly planned, not implemented. It does not automatically synchronize with GitHub. Architecture diagrams are explanatory illustrations, not screenshots or live measurements. The portfolio does not execute the projects, run a scanner or provide a security service; CyberShield is described as an educational application.
 
 Goals include industry certifications such as CompTIA Network+ and Security+, authorized cyber labs/CTFs and security-focused projects. These are learning objectives, not completed achievements or credentials already earned.
 

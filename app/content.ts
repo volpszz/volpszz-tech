@@ -141,6 +141,7 @@ export const copy = {
       hardware: "COLETA → IDENTIFICAÇÃO → SENSORES → TERMINAL",
       web: "NAVEGADOR → API → PERSISTÊNCIA",
       scanner: "CONFIGURAÇÃO → TCP / UDP → RESULTADO",
+      scraper: "URL → HTTP → HTML → JSON",
     },
   },
   en: {
@@ -253,6 +254,7 @@ export const copy = {
       hardware: "COLLECT → IDENTIFY → SENSORS → TERMINAL",
       web: "BROWSER → API → PERSISTENCE",
       scanner: "CONFIGURE → TCP / UDP → REPORT",
+      scraper: "URL → HTTP → HTML → JSON",
     },
   },
 };
@@ -262,7 +264,7 @@ export type Project = {
   repositoryUrl?: string;
   name: string;
   category: Category;
-  visual: "hardware" | "web" | "scanner";
+  visual: "hardware" | "web" | "scanner" | "scraper";
   stack: string[];
   platform: Localized<string>;
   summary: Localized<string>;
@@ -275,6 +277,106 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    slug: "web-scraper",
+    repositoryUrl: "https://github.com/volpszz/web-scraper",
+    name: "Web Scraper v1",
+    category: "web",
+    visual: "scraper",
+    stack: ["Python", "requests", "Beautiful Soup", "JSON", "unittest"],
+    platform: {
+      pt: "Python 3.10+ · terminal · execução local",
+      en: "Python 3.10+ · terminal · local execution",
+    },
+    summary: {
+      pt: "Scraper educacional de uma página: valida uma URL HTTP/HTTPS, extrai título e links únicos do HTML e salva o resultado em JSON.",
+      en: "An educational single-page scraper: validates an HTTP/HTTPS URL, extracts the title and unique links from HTML and saves the result as JSON.",
+    },
+    overview: {
+      pt: [
+        "A v1 acompanha o caminho de uma URL digitada no terminal até um arquivo estruturado. O objetivo é estudar HTTP, interpretação de HTML e persistência sem adicionar navegador automatizado, banco de dados ou crawling.",
+        "O código separa validação, requisição, extração e gravação em funções. O repositório inclui testes com unittest, integração HTTP local e um guia de estudo em português. A coleta usa o HTML recebido na resposta, não o DOM alterado por JavaScript.",
+      ],
+      en: [
+        "v1 follows a URL entered in the terminal through to a structured file. Its goal is to study HTTP, HTML parsing and persistence without adding browser automation, a database or crawling.",
+        "The code separates validation, requests, extraction and storage into functions. The repository includes unittest tests, local HTTP integration and a Portuguese study guide. Extraction uses the response HTML, not a DOM modified by JavaScript.",
+      ],
+    },
+    features: {
+      pt: [
+        "Entrada interativa com repetição para URLs estruturalmente inválidas; rejeita credenciais embutidas, espaços e portas inválidas.",
+        "GET com requests, timeout=10, redirecionamentos e tratamento de erros HTTP e de rede.",
+        "Verificação de Content-Type antes da extração: aceita text/html e application/xhtml+xml.",
+        "Primeiro <title> opcional e destinos de a[href] resolvidos pela URL final da resposta, sem fragmentos ou duplicatas e na ordem de descoberta.",
+        "Filtra links vazios, âncoras locais, mailto:, tel:, javascript:, credenciais e URLs que falham na validação básica; um href malformado não interrompe os demais.",
+        "Grava results/result.json em UTF-8 com URLs de origem e final, status, Content-Type, instante UTC, título, links e contagem; saída 0 somente após salvar.",
+      ],
+      en: [
+        "Interactive input retries structurally invalid URLs; rejects embedded credentials, whitespace and invalid ports.",
+        "GET through requests with timeout=10, redirects and HTTP/network error handling.",
+        "Content-Type checked before extraction: accepts text/html and application/xhtml+xml.",
+        "Optional first <title> and a[href] destinations resolved against the final response URL, without fragments or duplicates and in discovery order.",
+        "Filters empty links, local anchors, mailto:, tel:, javascript:, credentials and URLs failing basic validation; a malformed href does not stop other links.",
+        "Writes UTF-8 results/result.json with source/final URLs, status, Content-Type, UTC timestamp, title, links and count; exit code 0 only after saving.",
+      ],
+    },
+    flow: {
+      pt: [
+        { title: "Validar entrada", text: "main.py chama initial_scrap() em functions/scraping.py. A entrada é limpa nas extremidades e is_valid_url() confere a estrutura sem consultar DNS ou provar autorização." },
+        { title: "Obter e conferir", text: "fetch_page() usa requests.get(url, timeout=10) e raise_for_status(). Depois do diagnóstico da resposta, o coordenador verifica o tipo de conteúdo antes das duas extrações." },
+        { title: "Extrair e normalizar", text: "Beautiful Soup usa html.parser. extract_title() aceita título ausente; extract_links() combina urljoin(response.url, href), urldefrag(), validação e conjunto/lista para deduplicar sem reordenar." },
+        { title: "Persistir e informar", text: "save_result() cria diretórios e grava JSON legível em UTF-8. O caminho padrão fica na raiz do projeto, independentemente do diretório do terminal; falha de escrita ou cancelamento resulta em saída 1." },
+      ],
+      en: [
+        { title: "Validate input", text: "main.py calls initial_scrap() in functions/scraping.py. Input is trimmed and is_valid_url() checks its structure without querying DNS or proving authorization." },
+        { title: "Fetch & check", text: "fetch_page() uses requests.get(url, timeout=10) and raise_for_status(). After response diagnostics, the coordinator checks the content type before both extraction calls." },
+        { title: "Extract & normalize", text: "Beautiful Soup uses html.parser. extract_title() allows a missing title; extract_links() combines urljoin(response.url, href), urldefrag(), validation and a set/list to deduplicate without reordering." },
+        { title: "Persist & report", text: "save_result() creates directories and writes readable UTF-8 JSON. The default path stays under the project root regardless of the terminal directory; a write failure or cancellation produces exit code 1." },
+      ],
+    },
+    decisions: {
+      pt: [
+        { title: "HTML antes de automação", text: "requests e Beautiful Soup bastam para dados presentes na resposta. Não simular um navegador mantém o fluxo pequeno e torna explícita a diferença entre HTML recebido e conteúdo dinâmico." },
+        { title: "URL final como referência", text: "Redirecionamentos podem mudar o endereço do documento. Resolver links pela response.url evita usar a base antiga; fragmentos são removidos, mas queries são preservadas, sem canonicalização completa." },
+        { title: "Contratos verificáveis", text: "Funções de extração podem receber strings offline. Testes com unittest combinam respostas simuladas, servidor HTTP em loopback, leitura do JSON salvo e subprocessos reais do CLI, sem depender de sites públicos." },
+      ],
+      en: [
+        { title: "HTML before automation", text: "requests and Beautiful Soup are enough for data present in the response. Not simulating a browser keeps the flow small and makes the distinction between response HTML and dynamic content explicit." },
+        { title: "Final URL as the base", text: "Redirects can change the document address. Resolving links against response.url avoids using the old base; fragments are removed but queries remain, without full URL canonicalization." },
+        { title: "Testable contracts", text: "Extraction functions accept offline strings. unittest tests combine mocked responses, a loopback HTTP server, reading saved JSON and real CLI subprocesses without relying on public sites." },
+      ],
+    },
+    lessons: {
+      pt: [
+        "Distinguir DNS, status HTTP, cabeçalhos e HTML versus DOM.",
+        "Resolver URLs relativas, filtrar esquemas e preservar ordem ao deduplicar.",
+        "Serializar Unicode, lidar com falhas de disco e testar o caminho completo até o JSON.",
+      ],
+      en: [
+        "Distinguishing DNS, HTTP status, headers and HTML versus DOM.",
+        "Resolving relative URLs, filtering schemes and preserving order during deduplication.",
+        "Serializing Unicode, handling disk errors and testing the full path through to JSON.",
+      ],
+    },
+    limitations: {
+      pt: [
+        "Uma página por execução, além dos redirecionamentos; não visita links, não executa JavaScript, não autentica e não contorna bloqueios. O portfólio apenas apresenta o projeto, não executa coletas.",
+        "Uso local em sites próprios ou autorizados, respeitando termos e regras de coleta. Não consulta robots.txt automaticamente; validação estrutural não é autorização nem proteção contra SSRF.",
+        "Sem limite de tamanho do corpo ou prazo global: timeout=10 controla esperas de conexão/leitura, não a duração total. Não exponha a rotina como serviço de URLs arbitrárias sem controles adicionais.",
+        "Não considera <base href>, iframes ou Shadow DOM, nem verifica se os destinos existem. XHTML usa o parser HTML, sem semântica XML estrita.",
+        "Cada sucesso sobrescreve results/result.json, sem escrita atômica ou histórico. Falhas anteriores à gravação preservam o arquivo antigo; falhas durante a escrita podem deixar conteúdo parcial.",
+        "v2 — planejada, não implementada: coleta em sites autenticados com autorização, sessões/cookies e tratamento seguro de segredos. Não significa login automático em qualquer site nem bypass de autenticação.",
+      ],
+      en: [
+        "One page per run, plus redirects; it does not visit links, execute JavaScript, authenticate or bypass restrictions. The portfolio presents the project only; it does not run scraping jobs.",
+        "Local use on owned or authorized sites, respecting terms and collection rules. It does not consult robots.txt automatically; structural validation is neither authorization nor SSRF protection.",
+        "No response-body size limit or global deadline: timeout=10 controls connection/read waits, not total duration. Do not expose this as an arbitrary-URL service without additional controls.",
+        "Does not account for <base href>, iframes or Shadow DOM, or check whether destinations exist. XHTML uses the HTML parser without strict XML semantics.",
+        "Each success overwrites results/result.json without atomic writes or history. Failures before saving preserve the old file; failures during writing can leave partial content.",
+        "v2 — planned, not implemented: scraping authorized authenticated sites using sessions/cookies and safe handling of secrets. This does not mean automatic login to any site or authentication bypass.",
+      ],
+    },
+  },
   {
     slug: "hardware-monitor",
     name: "Hardware Monitor",

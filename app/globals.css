@@ -564,6 +564,7 @@ h3 {
 }
 .hardware-diagram,
 .web-diagram,
+.scraper-diagram,
 .scanner-diagram {
   padding: 26px;
 }
@@ -675,6 +676,31 @@ h3 {
 }
 .code-muted {
   color: var(--text-muted);
+}
+
+.scraper-pipeline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  font: 11px var(--font-geist-mono), monospace;
+}
+.scraper-pipeline > span,
+.scraper-pipeline > strong {
+  padding: 10px 12px;
+  border: 1px solid var(--border-strong);
+  border-radius: 3px;
+  font-weight: 400;
+}
+.scraper-pipeline > strong {
+  color: var(--accent-hover);
+  background: var(--accent-tint);
+  border-color: var(--accent-line);
+}
+.scraper-pipeline > i {
+  color: var(--accent);
+  font-style: normal;
 }
 
 /* Profile and supporting sections */
